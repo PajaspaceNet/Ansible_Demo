@@ -6,17 +6,17 @@ Tento repozitář obsahuje jednoduchý Ansible playbook, který na vzdáleném s
 
 ## 📁 Struktura projektu
 
-ansible-mini-webserver/
-├── inventory
-├── playbook.yml
-├── roles/
-│ └── webserver/
-│ ├── tasks/
-│ │ └── main.yml
-│ ├── files/
-│ │ └── index.html
-│ └── handlers/
-│ └── main.yml
+ansible-mini-webserver/ <br>
+├── inventory <br>
+├── playbook.yml <br>
+├── roles/ <br>
+│ └── webserver/ <br>
+│ ├── tasks/ <br>
+│ │ └── main.yml <br>
+│ ├── files/ <br>
+│ │ └── index.html <br>
+│ └── handlers/ <br>
+│ └── main.yml <br>
 
 
 
@@ -41,25 +41,27 @@ Otevři soubor `inventory` a nastav IP adresu a přístupové údaje:
 ```ini
 [web]
 192.168.1.100 ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
-
+```
 
 ##  Soustime
 ansible-playbook -i inventory playbook.yml
 
 
-✅ Po nasazení
+ ## Po nasazení
 
     Otevři prohlížeč a zadej IP serveru.
 
     Měl by se zobrazit vlastní index.html s hláškou „It works!“.
 
-📌 Požadavky
+## Požadavky
 
     Linux server (např. Ubuntu) s SSH přístupem
 
     Ansible nainstalovaný na tvém počítači
 
-#Odinstalace
+## Odinstalace
+```bash
 sudo apt remove apache2
+```
 
-Happy automation! 🤖✨
+## Happy automation! 🤖✨
