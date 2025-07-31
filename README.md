@@ -2,29 +2,31 @@
 
 Tento repozitář obsahuje jednoduchý Ansible playbook, který na vzdáleném serveru nainstaluje Apache webserver, nahraje vlastní `index.html` a spustí službu.
 
----
 
 ## 📁 Struktura projektu
+<pre>
 
-ansible-mini-webserver/ <br>
-├── inventory <br>
-├── playbook.yml <br>
-├── roles/ <br>
-│ └── webserver/ <br>
-│ ├── tasks/ <br>
-│ │ └── main.yml <br>
-│ ├── files/ <br>
-│ │ └── index.html <br>
-│ └── handlers/ <br>
-│ └── main.yml <br>
+ansible-mini-webserver/
+├── inventory
+├── playbook.yml
+├── roles/
+│   └── webserver/
+│       ├── tasks/
+│       │   └── main.yml
+│       ├── files/
+│       │   └── index.html
+│       └── handlers/
+│           └── main.yml
+├── README.md
+
+
+</pre>
 
 
 
-
----
 
 ## ⚙️ Co to dělá
-
+---
 - Nainstaluje Apache (`apache2`)  
 - Zkopíruje vlastní `index.html` do `/var/www/html/`  
 - Spustí a povolí službu Apache  
